@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Join A Project</title>
+    <link rel="stylesheet" type="text/css" href="joinpagecss.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <a href="index.html" class="button top-left">Go to Home</a>
+
+    <div class="dropdown top-right">
+        <a href="profile.html">Profile</a>
+        <a href="signin.html">Logout</a>
+    </div>
+
+    <div class="profile-image top-right">
+       
+        <img src="profillenpcpic.jpg" alt="Profile">
+    </div>
+
+    <h1 class="page-title">Join A Project</h1>
+
+    <div class="image-text-pair">
+        <button class="join-button">Join Project</button>
+        <img src="machine01.jpg" alt="Image 1">
+        <input type="text" placeholder="Enter info of the project">
+    </div>
+
+    <div class="image-text-pair">
+        <button class="join-button">Join Project</button>
+        <img src="machine02.jpg" alt="Image 2">
+        <input type="text" placeholder="Enter info of the project">
+    </div>
+
+    <div class="image-text-pair">
+        <button class="join-button">Join Project</button>
+        <img src="machine03.jpg" alt="Image 3">
+        <input type="text" placeholder="Enter info of the project">
+    </div>
+
+    <script>
+        
+        const projectTitle = localStorage.getItem('projectTitle');
+        const projectDescription = localStorage.getItem('projectDescription');
+        document.getElementById('projectTitle').value = projectTitle;
+        document.getElementById('projectDescription').value = projectDescription;
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

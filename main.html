@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" type="text/css" href="mainpagecss.css">
+</head>
+<body>
+
+    <div class="text-container">
+       
+        <a href="main.html" class="button top-left">Go to Home</a>
+
+    
+        <div class="dropdown top-right">
+            <a href="profile.html">Profile</a>
+            <a href="signin.html">Logout</a>
+        </div>
+        <img src="profillenpcpic.jpg" alt="Profile" class="profile-image" onclick="toggleDropdown()">
+		
+		<button onclick=navigateToPage("profile.html") class="button1">Profile</button>
+        <button onclick=navigateToPage("contactus.html") class="button2">Contact us</button>
+        <button onclick=navigateToPage("aboutus.html") class="button3">About us</button>
+		<button onclick=navigateToPage("postpageadvanced.html") class="button4">Post Project</button>
+        <button onclick=navigateToPage("view.php") class="button5">Join Project</button>
+		<button onclick=navigateToPage("chatownerpage.html") class="button6">Owner chat</button>
+		<button onclick=navigateToPage("chatengineerpage.html") class="button7	">Student chat</button>
+
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+        }
+
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>

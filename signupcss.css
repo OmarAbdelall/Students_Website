@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('hi.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #444;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 100px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.signup-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.signup-box label {
+    font-size: 30px;
+    display: block;
+}
+
+.signup-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.button {
+    background-color: #444;
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

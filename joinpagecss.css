@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('blackwhite.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #444; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 36px;
+    color: #444;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.join-button {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.image-text-pair img {
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.image-text-pair input[type="text"] {
+    width: 100%;
+    padding: 20px;
+    font-size: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.image-text-pair {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.profile-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+	.dropdown {
+		position: absolute;
+		top: 80px;
+		right: 10px;
+		display: none;
+		flex-direction: column;
+		background-color: #fff;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+		z-index: 1;
+		padding: 10px;
+	}
+
+	.dropdown a {
+		padding: 10px;
+		text-decoration: none;
+		color: #333;
+		display: block;
+	}
+
+	.dropdown a:hover {
+		background-color: #f0f0f0;
+	}
+	
+	.button {
+		position: absolute;
+		top: 10px;
+		padding: 10px 20px;
+		background-color: #0074d9;
+		color: #fff;
+		text-decoration: none;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	.button.top-left {
+		left: 10px;
+	}
+
+	.button.top-right {
+		right: 10px;
+	}
+
+	.dropdown {
+		position: absolute;
+		top: 80px;
+		right: 10px;
+		display: none;
+		flex-direction: column;
+		background-color: #fff;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+		z-index: 1;
+		padding: 10px;
+	}
+
+	.dropdown a {
+		padding: 10px;
+		text-decoration: none;
+		color: #333;
+		display: block;
+	}
+
+	.dropdown a:hover {
+		background-color: #f0f0f0;
+	}
+
+	.profile-image {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		cursor: pointer;
+	}

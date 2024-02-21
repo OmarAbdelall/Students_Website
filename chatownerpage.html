@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Owner Page</title>
+    <link rel="stylesheet" type="text/css" href="chatpagecss.css">
+    <h1>Owner Page</h1>
+</head>
+<body>
+
+	<div class="text-container">
+        <a href="main.html" class="button top-left">Go to Home</a>
+
+        <div class="dropdown top-right">
+            <a href="profile.html">Profile</a>
+            <a href="signin.html">Logout</a>
+        </div>
+    <div class="chat-container" id="chat-container-owner">
+        <div class="chat-messages" id="chatMessagesOwner">
+          
+        </div>
+        <div class="controls">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage('engineer')">Send</button>
+            <button onclick="clearChat('owner')">Clear Chat</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage(who) {
+            var message = document.getElementById("messageInput").value;
+            var chatLog = JSON.parse(localStorage.getItem('chatLog')) || { owner: [], engineer: [] };
+            chatLog[who].push(message);
+            localStorage.setItem('chatLog', JSON.stringify(chatLog));
+
+            updateChat();
+            document.getElementById("messageInput").value = "";
+        }
+
+        function clearChat(who) {
+            var chatLog = JSON.parse(localStorage.getItem('chatLog')) || { owner: [], engineer: [] };
+            chatLog[who] = [];
+            localStorage.setItem('chatLog', JSON.stringify(chatLog));
+            updateChat();
+        }
+
+        function updateChat() {
+            var chatLog = JSON.parse(localStorage.getItem('chatLog')) || { owner: [], engineer: [] };
+            var chatMessages = document.getElementById("chatMessagesOwner");
+            chatMessages.innerHTML = ""; 
+
+            for (var i = 0; i < chatLog.owner.length; i++) {
+                var newMessage = document.createElement("p");
+                newMessage.textContent = "You: " + chatLog.owner[i];
+                newMessage.classList.add('owner');
+                chatMessages.appendChild(newMessage);
+                chatMessages.appendChild(document.createElement("br")); 
+            }
+            for (var j = 0; j < chatLog.engineer.length; j++) {
+                var newMessage = document.createElement("p");
+                newMessage.textContent = "User: " + chatLog.engineer[j];
+                newMessage.classList.add('engineer');
+                chatMessages.appendChild(newMessage);
+                chatMessages.appendChild(document.createElement("br")); 
+            }
+        }
+
+        document.getElementById("messageInput").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                sendMessage('engineer');
+            }
+        });
+
+        setInterval(updateChat, 1000); 
+    </script>
+</body>
+</html>

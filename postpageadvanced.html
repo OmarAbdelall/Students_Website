@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Page</title>
+    <link rel="stylesheet" href="postpageadvancedcss.css">
+</head>
+
+<body>
+    <h1 class="page-title">Post Your Project</h1>
+    <?php if (isset($_GET['error'])): ?>
+		<p><?php echo $_GET['error']; ?></p>
+	<?php endif ?>
+    <div class="text-container">
+        <a href="main.html" class="button top-left">Go to Home</a>
+
+        <div class="dropdown top-right">
+            <a href="profile.html">Profile</a>
+            <a href="signin.html">Logout</a>
+        </div>
+
+        <img src="profillenpcpic.jpg" alt="Profile" class="profile-image" onclick="toggleDropdown()">
+
+        <h1>Post Page</h1>
+
+        <form class="post-form" id="postForm"
+        action="upload.php"
+        method="post"
+        enctype="multipart/form-data">
+            <div class="form-group">
+                
+                <label for="projectTitle">Title:</label>
+                <input type="text" id="projectTitle" name="projectTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label for="projectDescription">Description:</label>
+                <textarea id="projectDescription" name="projectDescription" rows="6" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="my_image">Attach Images:</label>
+                <input type="file"  name="my_image" accept="image/*" multiple>
+            </div>
+
+            <div class="form-group">
+                <button class="post-button" type="submit" name="submit" onclick="post()">Post</button>
+                <button class="clear-button" type="reset" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

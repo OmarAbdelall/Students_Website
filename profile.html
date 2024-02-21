@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" type="text/css" href="profilecss.css">
+</head>
+
+<body>
+    <div class="text-container">
+    
+        <a href="main.html" class="button top-left">Go to Home</a>
+
+        
+        <div class="dropdown top-right">
+            <a href="profile.html">Profile</a>
+            <a href="signin.html">Logout</a>
+        </div>
+        <img src="profillenpcpic.jpg" alt="Profile" class="profile-image" onclick="toggleDropdown()">
+
+        <h1 class="page-title">Your Profile</h1>
+
+        <div class="profile-sections">
+           
+            <div class="info-section left">
+                <h2>Your Experience</h2>
+                <textarea id="information" name="information"></textarea>
+            </div>
+
+            
+            <div class="info-section right">
+                <h2>Projects Worked On</h2>
+                <textarea id="projects" name="projects"></textarea>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <a class="button" type="submit">Save</button>
+				<a class="button" href="signin.html">Logout</a>
+				<a class="button" href="delete-account.html">Delete Account</a>
+            </div>
+
+        </form>
+    </div>
+
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+        }
+    </script>
+</body>
+
+</html>
